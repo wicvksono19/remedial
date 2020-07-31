@@ -1,6 +1,5 @@
 def alphabet_postion(text):
-    hasil = []
-    hasil2 = []
+    new_text= text.lower()  
     dict = {
         'a' : '1',
         'b' : '2',
@@ -29,16 +28,9 @@ def alphabet_postion(text):
         'y' : '25',
         'z' : '26'
         }
-    text2 = text.lower()
-    for i in text2:
-        # print(i)
-        # print(type(i))
+    for i in new_text:
         if i in dict:
-            print(i)
-            # print(i)
-            hasil = text2.replace(i, dict[i])
-            hasil2.append(hasil)
-    print(hasil2)
-
+            new_text = new_text.replace(i, dict[i])  
+    print(new_text)
 
 alphabet_postion("The sunset sets at twelve o'clock.")
